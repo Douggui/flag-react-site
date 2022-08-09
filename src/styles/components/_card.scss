@@ -1,0 +1,135 @@
+.countries {
+    text-align: center;
+   
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+  
+      .card {
+        position: relative;
+        height: 100px;
+        width: 160px;
+        border-radius: 4px;
+        transition: 0.3s;
+        margin:5px;
+  
+        h2 {
+          font-size: 1rem;
+        }
+       
+  
+        &:hover {
+          transform: scale(1.2);
+          z-index: 2;
+          
+        }
+  
+        &:hover .infos {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+  
+        .infos {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.7);
+          color: $color-2;
+          height: 100%;
+          width: 100%;
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          opacity: 0;
+          transform: scaleY(0);
+          transition: 0.3s;
+        }
+        img {
+          height: 100px;
+          width: 160px;
+          object-fit: cover;
+          border-radius: 10px;
+         
+        }
+      }
+    }
+    .radio-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      
+      li{
+        display: flex;
+      justify-content: space-around;
+      align-items: center;
+      }
+      input {
+        transform: translateY(1px);
+        margin-left: 13px;
+      }
+  
+      label {
+        margin-left: 10px;
+        color:$color-1;
+        cursor: pointer;
+      }
+    }
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 40px;
+      font-size: 1.3rem;
+      border: 3px solid $color-1;
+      outline: none;
+      transition: 0.4s;
+      text-align: center;
+      width: 400px;
+      margin-bottom: 20px;
+  
+      &:focus {
+        background: $color-1;
+        border-radius: 4px;
+        color: $color-1;
+      }
+    }
+    input[type="range"] {
+      width: 30%;
+      height:20px;
+     
+      
+    }
+    .sort-container{
+      background-color: rgb(53, 52, 52);
+      width:80%;
+      border-radius: 40px;
+      margin: auto;
+      display: flex;
+      justify-content:space-around ;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 5px ;
+      margin-bottom: 50px;
+    }
+    .counties-list{
+      display:flex;
+      flex-wrap:wrap;
+      width: 80%;
+      margin: auto;
+      margin-top: 30px;
+    }
+    h5{
+      font-size: 0.8rem;
+      color: $color-1;
+      border-radius: 20px;
+      transition:0.3s ease-in-out;
+      background-color: transparent;
+      border:1px $color-1 solid;
+      padding: 0 8px;
+      &:hover{
+      background-color: $color-1;
+      color: $color-2;
+      cursor: pointer;
+      }
+    }
+   
+  }
